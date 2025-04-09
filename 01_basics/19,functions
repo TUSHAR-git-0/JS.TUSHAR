@@ -1,0 +1,90 @@
+// compile up the code 
+
+// console.log("T");
+// console.log("U");
+// console.log("S");
+// console.log("H");
+// console.log("A");
+// console.log("R");
+
+function sayMyName(){   // function(keyword)   function_name ( )  then { function defination}
+console.log("T");
+console.log("U");
+console.log("S");
+console.log("H");
+console.log("A");
+console.log("R");
+
+}
+
+sayMyName       // this is refrence to my function
+
+sayMyName()     // execution happens with ( )
+
+
+function add_two_numbers(number1,number2){
+    console.log(number1 + number2);
+}
+
+add_two_numbers(3,4);
+add_two_numbers(3,"4");
+add_two_numbers("3",4);
+
+
+add_two_numbers(3,"a");// this gives us answer because we never have check weather the number is NUmber or any other datatype
+
+add_two_numbers("c",4);  // take this as strings
+
+
+
+// *******************
+// using variables to store the values of functions
+
+const value= add_two_numbers(5,2);
+
+console.log("value ", value);    // value is "  undefine  " because  here nothing is returning to value variable ( we are just calling function nad cout any thing:)
+
+
+
+
+//  returning//
+
+
+const multiplyNumbers = function (num1, num2) {
+    return( num1 * num2 );                           // here we are returning the actuall value to the variable  (result)
+};
+
+const result = multiplyNumbers(5, 6);
+console.log(result);
+
+// *******************
+
+function isloggedin(username){          // automatically detect the datatypr of parameters
+
+    return  `${username} just logged in`  // string interpolation
+
+}
+
+console.log(isloggedin("tushar"))
+
+// what if we do not  give any argument while function calling
+
+console.log(isloggedin()); // undefine just logged in : this is because nothing is going as argument 
+
+// we can check for the argument type or parameter type in 
+
+function isloggedin1(username = "TUSHAR"){
+    if (username === undefined){
+    // if(!usrname)  : to check the weather the value is not undefined or not
+        console.log("please enter the valid username");
+        return;
+    }   
+        
+        return `${username} just logged in`
+
+}
+
+//console.log(isloggedin1("tushar"))
+console.log(isloggedin1());
+
+// we can also give "DEFAULT ARGUMENTS in functions" NEVER UNDEFINED
