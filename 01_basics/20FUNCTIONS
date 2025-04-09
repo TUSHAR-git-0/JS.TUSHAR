@@ -1,0 +1,57 @@
+// when wwe have to return multiple values from single return
+
+function calculatecartprice(num1){
+    return num1;
+}
+
+console.log(calculatecartprice(200))
+
+
+//****************************************** " REST OPERATOR " to return ultiple values 
+
+// REST OPERATOR = [...]  ==>> 3 dots
+
+function calculatecartprice1(...nums){
+    return nums;
+}
+
+console.log(calculatecartprice1(300,200,500,700)) // it will return array
+
+
+// **************OBJECTS AND FUNCTION 
+
+const user ={                           //object
+
+    username: "tushar",
+    price:40000
+}
+
+function handleObjects(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+
+}
+
+handleObjects(user);
+
+handleObjects({                   // passing object directly
+    username:"samsher",
+    price: 39,
+})
+
+
+// ************************************** ARRAYS
+
+const newArray =[ 200,400, 600,700,1100];
+
+function getelement_of_array(getArray){
+
+    return getArray[1];
+
+
+}
+
+console.log(getelement_of_array(newArray));
+
+// direct passing
+
+console.log(getelement_of_array([1,2,3,4,5,5,6]))
