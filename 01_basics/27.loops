@@ -1,0 +1,53 @@
+//loops   : iterations
+
+// 01) FOR LOOP
+
+for(let i=0;i<11;i++){
+    
+    console.log(i);
+}
+
+// we can select duplicates using (ctrl + d)
+
+//  i is not acessible outside for loop Because of "block scope"
+
+
+console.log( "five ka table is")
+for(let i=1; i<=10;i++ ){
+    if (i==5){
+        console.log(` ye wali value nhi aayi,${i*5}`);
+        continue;
+    }
+    console.log(i*5);
+}
+
+// nested loop
+
+for(let i=1; i<=10;i++ ){
+
+    console.log(`outer loop is: ${i}`);
+    for(let j=1;j<=5;j++){
+        // console.log(`inner loop  value is: ${j}     inner loop:${i}`);
+
+        console.log(`${i} * ${j} = ${i * j}\n`);
+
+    }
+}
+
+// for arrays 
+
+let my_array= ["tushar ", "ayush","harshit","vikky"];
+
+console.log("my array ki length is : "+ my_array.length);
+
+for(let i=0;i<my_array.length;i++){
+    console.log(my_array[i]);
+}
+
+// BREAKE , CONTINUE
+
+// same as the in the************ DSA
+
+//  breake: it will stop the loop and will not execute the rest of the code in the loop
+
+//  continue: it will skip the current iteration and will move to the next iteration
