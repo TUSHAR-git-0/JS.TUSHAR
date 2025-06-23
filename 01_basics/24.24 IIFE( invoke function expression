@@ -1,0 +1,44 @@
+// immediately invoked function expression (IIFE)
+
+// jab hum chahte h ki humara function likhte hi execute kare  (file for database connections) or jab hume global scope se pollution nhi chahiye
+
+function Chai () {
+    console.log(`DB CONNECTED`);
+}
+Chai();
+
+// iife
+
+
+// yha first ( function declaration ) (function execution){ ( ) ( ) }  , BS WHOLE FUNCTION KO BRACES M DAAL DIYA
+
+// bus IIFE  banane k baad ";" add karna function execution k baad : warna it declare overflow like condition
+(function chai1 (){
+    console.log(`data base connected`);
+
+})();
+
+
+// **************************** 
+
+// like we can also make arrow functions'
+
+
+// named iife 
+(()=>{
+    console.log(`ye h arrow function`)
+})();
+
+
+
+// non named IIFE with parameters
+
+( (name)=>{
+    console.log(`NAME IS :,${name}`);
+})("tushar");
+
+// hence we can create multiple iife in single code
+
+
+
+
