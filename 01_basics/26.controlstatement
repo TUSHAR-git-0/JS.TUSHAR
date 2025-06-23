@@ -1,0 +1,287 @@
+//  control statements
+//  if, else, if-else, switch, case, default, break, continue,
+
+//  if statement
+
+// if(condition){
+//     //code to be executed if condition is true
+// }
+
+if(2==2){
+    console.log("Condition0 is true");
+}
+
+// < , > , <= , >= , == ,  != , === , !==
+
+// (===)  check the datatype too!
+
+if(2 =="2"){
+
+    console.log("Condition1 is true");
+}
+// 2==2 is true because 2 is equal to 2
+// 2=="2" is true because 2 is equal to 2 but it is not checking the datatype
+
+if(2 === "2"){
+    console.log("Condition2 is true");       //does not run because 2 is a number and "2" is a string
+    } 
+
+
+
+    // *********************************   ELSE   ***************************
+
+
+    // every thing is same as the coding(DSA)   BUT BUT BUT
+
+    // YE WALA CASE DEKH  ,OUTPUT:- temperature is less than 50************* if condition fails it automatically execute else wali
+
+
+    const temp =50;
+
+    if(temp>50){
+        console.log("temperature is greater than 50");
+    }
+    else{
+        console.log("temperature is less than 50");
+        }
+
+// learn scope
+
+const score= 200;
+
+if(score>100){
+    const power ="fly";
+    console.log(`user power is: ${power}`);
+
+}
+else{
+    // console.log(`ser power is: (power)`);  // else block does not have access to the power variable}
+}
+
+
+// agr  const ki jgh " var "  use krte then ye block k bhaar bhi access dega ( BAD PRACTISE )
+
+
+//IMPLISITE SCOPE   SHORTCUTT
+const balance= 200;
+
+ if(balance>100) console.log("executed");
+
+
+ //NESTING CONDITIONS
+
+if(balance<400){
+    console.log("balance is smaller")
+}
+else if(balance>400){
+    console.log("balance is greater");
+}
+else{
+    console.log("balance is equal");
+}
+
+const userloggedIn=true;
+const debitCard= true;
+
+if(userloggedIn && debitCard) //checking multiple conditions
+    console.log("user is allowed to shop");
+
+
+const logged_in_via_email=true;
+const logged_in_via_mobile=false;
+
+if(logged_in_via_email || logged_in_via_mobile){
+    console.log(" userallowed to logged in");
+}
+
+
+// SWITCH CASES
+
+// switch(key){
+//     case "key1":
+//         console.log("key1");
+//         break;
+//     case "key2":
+//         console.log("key2");
+//         break;
+//     default :
+//     console.log("default");
+//     }
+
+const month=3;
+
+switch(month){
+    case 1:
+        console.log("january");
+        break;//                    break is used to break the flow
+     
+    case 2:
+         console.log("february");
+         break;
+
+     case 3:
+         console.log("march")
+         break;
+
+     case 4:
+        console.log("april")
+        break;
+
+    case 5:
+       console.log("may")
+       break;
+
+    default:
+        console.log("default");
+        break;          // break is not necessary here but it is good practice to use it
+    
+   
+   
+}
+// we use break after every statement because if we not do it check all the cases and print all the cases
+
+// but do not go to default if we not use break it will not go to default case
+
+
+switch(monthy){
+    case "jan":
+        console.log("january");
+        break;
+    case "feb":
+        console.log("february");
+        break;
+    case "mar":
+        console.log("march");
+        break;
+    case "apr":
+        console.log("april");
+        break;
+    case "may":
+        console.log("may");
+        break;
+    default:
+        console.log("default");
+        break;
+
+}
+
+//   NOT COMPARING BUT PASSING THE ARGUMRNTS
+
+const user_name =" tushar ";
+
+if(user_name){
+    console.log("we got user name");
+}
+else{
+    console.log("we did not get user name");
+}
+
+// we assume that if the user name is not empty then it is true and if it is empty then it is false
+// 
+// if (user_name= "")   output:- we did not get user name*******************  if empty string = false
+
+// ***************************************
+
+// falsy values in js
+
+
+// 0
+// ""
+// null
+// undefined
+// NaN
+// false
+// -0
+//  0n
+
+// *******************************************
+
+// truthy values in js
+
+// 1
+// "tushar"
+// true
+// 10
+// "0"              // string ke andar kuch bhi = true
+// 0.1
+// 'false' //        string ke andar kuch bhi = true
+
+// " "              // string m space = true
+
+// []                empty array = true
+// {}                empty object = true
+
+// function(){}         empty function = true
+
+
+
+
+// ****************************************************
+
+//  we can check the Array empty or not using length property
+
+const array = [];
+ if (array.length == 0) { 
+    console.log("array is empty");
+ } 
+ else{
+    console.log("array is not empty");
+ }
+
+ //*******************************************************
+
+//  we can check the object empty or not using Object.keys() method
+
+// Object.keys()  gives the array of keys of the object
+
+const obj = {};
+
+if (Object.keys(obj).length == 0) {
+    console.log("object is empty");
+}
+else{
+    console.log("object is not empty");
+    }
+
+
+// some fuddu things
+
+false == 0; // true
+false == ""; // true
+false == []; // true
+0==""// true
+
+       
+
+
+
+// *******************************************************
+
+// NULLISH COALESCING OPERATOR (??)   , NULL , UNDEFINED     (** return the safest values**)
+
+// opt  forthe safest value (), other wise (first) value
+
+let val1;
+//  val1= 5 ?? 10     *******  5
+// val1 = null ?? 10   ******  10
+// val1= undefined ?? 20   //******* 20
+
+val1= null ?? 10 ?? 20;      // jo vale phle mi jatti h usse opt kr lega
+
+
+ console.log(val1)
+ // 20
+ 
+
+
+//  TERNIARY  ************************************
+
+// working for if and else
+
+// condition ? value_if_true : value_if_false
+
+const tea_price = 50;
+
+tea_price>=80? console.log("costly"): console.log("affordable"); // costly
+
+
