@@ -1,0 +1,59 @@
+//nested scope in javascript
+
+// it is like ice cream eaters ,( a child , a adult)
+
+// child can ask for ice cream to adult , adult can't ask for ice cream to child 
+
+function one(){
+    const username="hitesh";
+
+    function two(){
+        const website ="google";
+        console.log(username);
+
+    }
+    // console.log(website); ye nhi execute karega ( out of scope )
+
+    two()     // execution of two function
+
+}
+
+one()  
+// hitesh                 // execution of one function  
+
+
+
+//********************************** */ OTHER EXAMPLE
+
+if(true){
+    const name="tushar";
+    if(name === "tushar"){
+        const website= "google";
+        console.log(name + website);
+    }
+    // console.log(website);    this is too out of scope
+}
+
+// console.log(name);  this is out of scope
+
+
+
+//+++++++++++++++++++++++++++++INTRESTING+++++++++++++++++++++++
+
+console.log(addone(5))      // callin before declaration
+
+function addone(num){
+    return num+1;
+}
+// console.log(addone(5))       this also will not give error
+
+
+// storing in a variable 
+
+
+addtwo(5);                      // calling before declaration not allowed when u inserted / stored in variable
+const addtwo = function(num){
+    return num+2;
+}
+
+addtwo(5)  //    no error here
