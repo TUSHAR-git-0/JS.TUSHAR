@@ -1,0 +1,85 @@
+//scopes
+let a=10;
+const b=30;
+var c=20;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+// { } these curly braces are used to create scope 
+let d= 300;
+if(true){
+    let d=10;
+    const e=30;
+    var f=20;
+}
+
+
+console.log(d); // give value according to outer scope
+// console.log(e); // ReferenceError: e is not defined
+// console.log(f)
+//  // ********************** this will give 20 even if f is local scope,,
+
+// therefore we are not declaring any variable "var".
+
+
+
+// HOSTING IN JS
+
+// Hoisting allows function declarations and variable declarations to be moved to the top of their containing scope during compilation.
+
+// Example of hoisting with function declarations
+
+getName();
+console.log(x);
+
+
+var x=7;
+
+function getName() {
+    console.log("namste js");
+
+}
+
+// OUTPUT:-namste js,  UNDEFINE
+
+
+
+// ***************************************************************
+
+
+
+// when we also deleted var=7;
+
+getName();
+console.log(x);
+
+
+function getName() {
+    console.log("namste js");
+}
+
+// output:- namste js, NOT DEFINE
+
+
+// ***************************************************************(      UNDEFINED AND NOT DEFINED   ) ALAG ALAG KESE ?
+
+
+var x=7;
+
+function getName() {
+    console.log("namste js");
+
+}
+console.log(getName)//  output me pura function aa jayega   function getName() {
+                   //                                          console.log("namste js");
+                   //                                      
+                   //                                      }
+
+
+// this is because of " global execution scope "
+
+// sabse phle GEC banega all variables and functions are hoisted to the top of their scope
+
+// 
