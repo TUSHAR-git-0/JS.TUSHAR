@@ -1,0 +1,105 @@
+//IMPORTANT LECTURE 
+
+//    JAVASCRIPT EXECUTION CONTEXT
+
+// 1 jab bhi hum javascript ko koi bhi code file dete hai then "GLOBAL EXECUTION CONTEXT "banta hi banta h or isko "this" variable k andar refer kr diya jata h
+//    har environment mei global execution context hota hai , BROWSER KA GLOBAL EXECUTION CONTEXT = WINDOW OBJECT
+
+// 2 jab hum koi bhi function call karte hai to "FUNCTIONAL EXECUTION CONTEXT/ LOCAL EXECUTION CONTEXT
+ 
+// 3 EVAL EXECUTION CONTEXT
+
+
+// ****************************************
+
+// code execution is done in two phases
+
+// 1 memory creation phase   :- memory allocate only no execution done           
+
+// 2 execution phase :-  execution done here
+
+
+// for example1;
+
+let value1 =10;
+let value2 =20;
+function addNum(num1 , num2){
+    let result = num1 + num2;
+    return result;
+}
+ let result1 = addNum(value1 , value2);
+ let result2 = addNum(10 , 20);
+
+// explanation
+
+// 1  sabse phle global execution banega ( or isko "this" k andar refer kr diya jata h)
+
+// 2 MEMORY PHASE: sare variable memory allocate honge ==( undefined )  
+     // value1 = undefined
+     // value2 = undefined
+     // addNum =   **************ISKA SAARA CODE STORES IN MEMORY PHASE{.....}
+     // result1 = undefined
+     // result2 = undefined
+
+    //  **first cycle complete
+
+// 3 EXECUTION PHASE:
+    // value1 = 10
+    // value2 = 20
+
+    //  ab hum result1 k  "addNum" ko execute karenge by creating  "new execution context"
+    //   executional context = {new variable environment banega + executional thread banega}
+    //   ab firse (memory pahse and executional phase )start karenge  for function declaration 
+
+// 4 MEMORY PHASE:
+
+//no memory for parameters   only for arguments
+
+// val1=undefine
+// val2=undefine
+// total= undefine
+
+// 5 EXECUTIONAL PHASE;
+//  num1=10
+// num2=20
+// total=30            then this return to GLOBAL EXECUTIONAL CONTEXT ( initially created)
+
+//imp**  ye jo executional context banaya tha function k liyye uska memory deallocate ho jata hain( delete bhi hoga) after all operations of function complete honge
+
+//6  fir NVM CREATE+ THREAD created
+
+// MEMORY PHASE:
+// val1=undefine
+// val2=undefine
+// total= undefine
+
+// EXECUTIONAL PHASE:
+
+// num1=10
+// num2=20
+// total=30
+
+// THEN RETURN THEN DELETE MEMORY OF EXECUTIONAL CONTEXT OF FUNCTION
+
+8*********************************************?
+
+ALL THESE PROCESS IS DONE WITH HELP OF STACK
+
+// call stack (LIFO)
+
+**************************************************************
+//   ( if we having 3 methods {one()  , two(), three( )})
+
+// if we call one() then one() will be on top of call stack
+    //   then two call within one() then two() will be on top of call stack
+        // then three() call within two() then three() will be on top of call stack 
+        // here after 3 will be deleted first then two then one
+        
+// stack created
+
+4 three()    // BOTH Phases 
+3 two()
+2 one()
+1 GLOBAL EXECUTIONAL CONTEXT
+
+// ***** WHEN ALL THE LINES GET EXECUTED THEN  WHOLE ( MAIN ) EXECUTION CONTEXT WILL GET DELTED   *******************
