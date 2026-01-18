@@ -6,7 +6,7 @@ console.log(stringnumber); // 7
 
 let value1= 3;
 let negvalue= -value1;
-console.log(negvalue);
+console.log(negvalue);    //   -3
 
 // console.log(2 + 2 + '1'); // 41     
 // console.log('1' + 2 + 2); // 122        (agr suru me string hai toh baaki sab string hi hoga)
