@@ -21,17 +21,29 @@ console.log(typeof score1)  //string
         let score3="33eriueivn"
         let value_in_number2=Number(score3);
         console.log(value_in_number2)  //NaN  =not a number
-        console.log(typeof value_in_number2)  //number
+        console.log(typeof value_in_number2)  //number           MEANS YE NUMBER M CONVERT TO HUA HAI 
 
         let score4= null
         let value_in_number3=Number(score4);    
-        console.log(value_in_number3)  //0
+        console.log(value_in_number3)  //  0                      NULL -> 0 
         console.log(typeof value_in_number3)  //number
 
         let score5= undefined
         let value_in_number4=Number(score5);    
-        console.log(value_in_number4)  //NaN
+        console.log(value_in_number4)  //NaN                       undefined  -> NaN
         console.log(typeof value_in_number4)  //number
+
+
+/*  conclusion 
+{
+
+string              ->              number
+string + number     ->              Nan
+ undefined          ->              NaN
+ NULL               ->              0
+}
+*/
+
 
         // string to number will give NaN if the string is not a number 
 
