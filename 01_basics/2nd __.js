@@ -1,6 +1,14 @@
 console.log("tushar sharma")
 // DATATYPES AND variables  ,ECMA
 
+js => language hai ,jo browser p run karti hai , jo web pages ko  dynamic banati hai !
+
+js ko run karne k liye , html file ko script se link karke run karate hai !
+
+but 
+
+nodejs => is a environment jo js ko browser k bhaar hi run /execute kara deta hai !
+
 const account_id="1397243792"
 let account_email="tusharsharma@outlook.com"
 var  account_password="123456"
