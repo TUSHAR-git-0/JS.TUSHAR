@@ -1,12 +1,14 @@
 "use strict"; // treate all js code as a newer version of js
 
 // alert("hello world") // we are using nodejs, not browser
+// alerrt ( 3+3 )    node js yaha error deti hai ,,,, browser m pop up hogi !
+
 
 
 // LEARN PREMEATIVE AND NON PREMEATIVE DATATYPE 
 
 
-
+// ECMA SCRIPT   is a organizations  =>   M java script ki documentation likhi hai !
 
 console.log(3+3)   // js avoid the white space,2)extra space,3)tab space,4) new line space
 
