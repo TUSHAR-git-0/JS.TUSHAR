@@ -34,7 +34,7 @@ var is a global scope variable     -----//   don't use var as variable type
 let is a block scope variable
 */
 
-// we will use ( let, const ):- because it will remove the global scope variable problem
+// we will use ( let, const ):- because it will remove the global scope variable problem ( BECAUSE OF FUNCTIONAL SCOPE )
 
 let account_state;
 
