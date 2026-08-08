@@ -13,9 +13,9 @@ console.log(2 != 1);  // true
 //conversion hone lagta h
 
 console.log(1<"2");  // true    (because 1 is converted to string and then compared)
-console.log("02">1); // false   (because 02 is converted to number and then compared)
+console.log("02">1); // true   (because 02 is converted to number and then compared)
 
-//   jo bhi baad me likha h uske according output aayega
+
 
 //NULL
 console.log(null > 0);  // false
